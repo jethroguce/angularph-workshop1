@@ -1,4 +1,3 @@
-<!-- <h1> Todo App </h1>
 <div class="row">
   <div class="col-md-12">
     <label>Name:</label>
@@ -8,15 +7,3 @@
     <button class="btn btn-primary" (click)="save(todo)">Save</button>
   </div>
 </div>
-
-<ul >
-  <li *ngFor="let t of todoList">
-    <app-todo [todo]="t"></app-todo>
-  </li>
-</ul>
- -->
-
- <app-form (saveForm)="getValue($event)">
- </app-form>
-
- <app-display [value]="todoList"></app-display>

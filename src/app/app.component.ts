@@ -12,6 +12,6 @@ export class AppComponent {
   todoList: Array<TodoModel> = new Array<TodoModel>();
 
   save(todo: TodoModel): void {
-    this.todoList.push(todo);
+    this.todoList.push(Object.assign({}, todo));
   }
 }
