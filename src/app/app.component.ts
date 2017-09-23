@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { TodoModel } from './todo/todo.model';
 
 @Component({
   selector: 'app-root',
@@ -6,5 +7,11 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'app';
+  name: string = 'Todo 1';
+  todo : TodoModel = new TodoModel();
+  todoList: Array<TodoModel> = new Array<TodoModel>();
+
+  save(todo: TodoModel): void {
+    this.todoList.push(todo);
+  }
 }
